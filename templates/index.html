@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List of Persons</title>
+</head>
+<body>
+  <h1>Listado de contacto</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for person in persons %}
+        <tr>
+          <th>{{ person.id }}</th>
+          <th>{{ person.firstname }}</th>
+          <th>{{ person.lastname }}</th>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
